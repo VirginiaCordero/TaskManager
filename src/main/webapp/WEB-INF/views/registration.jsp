@@ -11,9 +11,11 @@
 	<a href="/">Go back to main site</a>
 	<p>Create a new account</p>
 	<div class="form-group">
-		<form action="????" method="post">
-			<label for="email">Email address:</label> <input type="email"
-				class="form-control" id="email" name="email" required> 
+
+		<form action="/registerUser" method="post">
+			<label for="email">Email address:</label>
+			<input  required minlength="2" autocomplete="off" type="email"
+				class="form-control" id="email" name="emailAddress" required> 
 				<label for="pwd">Password:</label> <input type="password"
 				class="form-control" id="pwd" name="password"
 				pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
@@ -21,11 +23,6 @@
 				and at least 8 or more characters"
 				required>
 				<span class="validity"></span>
-			<div class="checkbox">
-				<label><input type="checkbox"> Remember me</label>
-			</div>
-			<input type="hidden" name="offersandpromos" value="false" /> I want
-			to receive offers and promotions.
 			<button type="submit" class="btn btn-default">Submit</button>
 		</form>
 	</div>
